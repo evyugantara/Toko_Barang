@@ -1,22 +1,20 @@
 import 'package:flutter/material.dart';
-import 'screens/game_screen.dart'; // Import game_screen.dart
+import 'screens/home_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Game',
+      title: 'Toko Pemesanan Barang',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: GameScreen(), // Tampilkan GameScreen sebagai layar utama
+      home: HomeScreen(),
     );
   }
 }
